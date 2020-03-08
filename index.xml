@@ -5,6 +5,7 @@
     <description>Recent content on 破竹子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
+    <copyright>This is a customized copyright.</copyright>
     <lastBuildDate>Sun, 08 Mar 2020 16:15:04 +0800</lastBuildDate>
     
         <atom:link href="https://pozhuzi.github.io/index.xml" rel="self" type="application/rss+xml" />
@@ -12,7 +13,26 @@
     
     
         <item>
-        <title>About </title>
+        <title>First Post</title>
+        <link>https://pozhuzi.github.io/2020/first/</link>
+        <pubDate>Sun, 08 Mar 2020 23:30:54 +0800</pubDate>
+        
+        <guid>https://pozhuzi.github.io/2020/first/</guid>
+        <description>破竹子的博客 https://pozhuzi.github.io/2020/first/ -&lt;p&gt;第一个post，总算是开始迈出一小步了。&lt;/p&gt;
+&lt;p&gt;但是对于如何更新还不是很熟悉，对于这个hugo结构还很陌生，以及git的使用。&lt;/p&gt;
+&lt;p&gt;为后面定个目标吧&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;继续美化博客&lt;/li&gt;
+&lt;li&gt;掌握如何更新删除&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;以上&lt;/p&gt;
+- https://pozhuzi.github.io/2020/first/ - This is a customized copyright.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>自我介绍</title>
         <link>https://pozhuzi.github.io/about/</link>
         <pubDate>Sun, 08 Mar 2020 16:15:04 +0800</pubDate>
         
@@ -35,7 +55,7 @@
 &lt;p&gt;&lt;!-- raw HTML omitted --&gt;1.CF新品试做根据NPI提供的规格，预估工艺参数，制作工艺卡，跟进新品试做的问题（首检情况，母批数据）&lt;br&gt;
 &lt;!-- raw HTML omitted --&gt;2.CF新光阻验证，确认新材料试做的产品数据是否符合规格，DOE条件下的表现（缺陷，形貌）&lt;br&gt;
 &lt;!-- raw HTML omitted --&gt;3.CF RA实验（选取-切割-测量-送样-测量-汇总报告），自学使用VBA提取小片测量数据，提高效率&lt;/p&gt;
-- https://pozhuzi.github.io/about/ - </description>
+- https://pozhuzi.github.io/about/ - This is a customized copyright.</description>
         </item>
     
     

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-<title>Tags</title>
+<title>First Post</title>
 
 <meta charset="utf-8">
 <meta name="X-UA-Compatible" content="IE=edge">
@@ -28,6 +28,8 @@
 <script src="https://pozhuzi.github.io/js/loadCSS.js"></script>
 <script src="https://pozhuzi.github.io/js/table.js"></script>
 
+
+<script src="https://pozhuzi.github.io/js/toc.js"></script>
 
 
 <script>
@@ -74,9 +76,7 @@
             
                 
                 
-                    
-                
-                <a class="a-block nav-link-item active" href="/tags/">
+                <a class="a-block nav-link-item false" href="/tags/">
                     Tags
                 </a>
         
@@ -111,14 +111,17 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
     
 </div><div ref="extraContainer" class="extra-container">
     
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+</div>
+    
     <div class="pagination">
         <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
             <i class="material-icons pagination-action-icon">
                 keyboard_arrow_up
             </i>
         </a>
-        
-        
         
     </div>
 </div><div class="single-column-drawer-container" ref="drawer"
@@ -144,9 +147,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 
                     
                     
-                        
-                    
-                    <a class="a-block drawer-menu-item active" href="/tags/">
+                    <a class="a-block drawer-menu-item false" href="/tags/">
                         Tags
                     </a>
             
@@ -164,6 +165,11 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                         RSS Feed
                     </a>
             
+            
+            <div class="toc">
+
+
+</div>
             
         </div>
     </div>
@@ -197,39 +203,84 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
             <div id="content">
 <div ref="streamContainer" class="stream-container">
     <div class="post-list-container post-list-container-shadow">
-        <a class="a-block">
-            <div class="post-item-wrapper post-item-wrapper-no-hover">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title post-item-title-small">
-                            Tags
-                        </div>
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                 style="background-image: url('/')">
+                
+                <img src="https://pozhuzi.github.io" style="display: none;"></img>
+                <div class="post-title">
+                    First Post
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2020-03-08 23:30
+                        </time>
+                        
+
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/%E5%BF%83%E6%83%85">心情</a>
+                                &nbsp;
+                            
+                        
                     </div>
                 </div>
             </div>
-        </a>
-        
-        
-                <a href="https://pozhuzi.github.io/tags/%E5%BF%83%E6%83%85/" class="a-block">
-                    <div class="post-item-wrapper">
-                        <div class="post-item post-item-no-gaps">
-                            <div class="post-item-info-wrapper"> 
-                                <div class="post-item-title">
-                                    心情
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>第一个post，总算是开始迈出一小步了。</p>
+<p>但是对于如何更新还不是很熟悉，对于这个hugo结构还很陌生，以及git的使用。</p>
+<p>为后面定个目标吧</p>
+<ol>
+<li>继续美化博客</li>
+<li>掌握如何更新删除</li>
+</ol>
+<p>以上</p>
+
+                    
+                    <HR width="100%" id="EOF">
+                    <p style="color:#777;">Last modified on 2020-03-08</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts">
+                    Next<br>No newer posts.
                 </a>
-        
-    </div>
-</div>
+                
+                
+                
+                <a class="older-posts" href="https://pozhuzi.github.io/about/">
+                    Previous<br>自我介绍
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
 
 
             </div>
+        </div>
+    </div>
+</div>
 
-
-<div id="single-column-footer">Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+            </div><div id="single-column-footer">Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
 <br>
 Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
 <br>
