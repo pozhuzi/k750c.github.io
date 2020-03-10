@@ -13,6 +13,21 @@
 
 
 
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-160166122-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
 <script src="/vendor/js/jquery.min.js" ></script>
 <script src="/vendor/js/popper.min.js" ></script>
 <script src="/vendor/js/bootstrap.min.js" ></script>
@@ -36,6 +51,24 @@
     loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
 </script>
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/vendor/js/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+  clientID: '155dd30feea0c4ff9c79',
+  clientSecret: '86a9adb1c90dd6901752af7e47b294f11e0ba54b',
+  repo: 'https:\/\/pozhuzi.github.io\/',
+  owner: 'pozhuzi',
+  admin: ['pozhuzi'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
+
 
 
 
@@ -47,7 +80,7 @@
     <a class="a-block nav-head false" href="https://pozhuzi.github.io">
     
         <div class="nav-title">
-            破竹子的博客
+            空山新雨后
         </div>
         
         <div class="nav-subtitle">
@@ -63,7 +96,7 @@
                 
                 
                 <a class="a-block nav-link-item false" href="/posts/">
-                    归档
+                    Archive
                 </a>
         
             
@@ -105,7 +138,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 <br>
 &copy;
 	
-	This is a customized copyright.
+	2020 PoZhuzi. All rights reserved.
 	
     </div>
     
@@ -134,7 +167,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                     
                     
                     <a class="a-block drawer-menu-item false" href="/posts/">
-                        归档
+                        Archive
                     </a>
             
                 
@@ -186,14 +219,14 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
             </i>
         </button>
         <a ref="navTitle" class="navbar-brand" href="https://pozhuzi.github.io">
-            破竹子的博客
+            空山新雨后
         </a>
     </div>
 </nav>
 <div class="single-column-header-container" ref="pageHead"
      v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
     <a href="https://pozhuzi.github.io">
-        <div class="single-column-header-title">破竹子的博客</div>
+        <div class="single-column-header-title">空山新雨后</div>
         
         <div class="single-column-header-subtitle">Learn for Life</div>
         
@@ -271,6 +304,8 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
                 
 
 
+<div id="gitalk-container"></div>
+
 
 
 
@@ -286,7 +321,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 <br>
 &copy;
 	
-	This is a customized copyright.
+	2020 PoZhuzi. All rights reserved.
 	</div>
     	</div>
     <script src="https://pozhuzi.github.io/js/journal.js"></script>
