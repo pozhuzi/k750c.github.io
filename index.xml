@@ -13,12 +13,60 @@
     
     
         <item>
+        <title>微软拼音配置小鹤双拼</title>
+        <link>https://pozhuzi.github.io/2020/20200408-xiaoheshuangpin/</link>
+        <pubDate>Wed, 08 Apr 2020 22:56:54 +0800</pubDate>
+        
+        <guid>https://pozhuzi.github.io/2020/20200408-xiaoheshuangpin/</guid>
+        <description>空山新雨后 https://pozhuzi.github.io/2020/20200408-xiaoheshuangpin/ -&lt;p&gt;操作环境：Win10		 版本1903&lt;/p&gt;
+&lt;h3 id=&#34;背景&#34;&gt;背景&lt;/h3&gt;
+&lt;p&gt;之前进入git bash，谷歌拼音输入法无法进行中英状态切换，而微软拼音可以正常进行中英切换，所以舍弃谷歌拼音了。我长期以来使用的是小鹤双拼，所以需要对微软拼音进行配置小鹤双拼。&lt;/p&gt;
+&lt;h3 id=&#34;设置的路径&#34;&gt;设置的路径&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;设置&amp;ndash;时间和语言&amp;ndash;语言&amp;ndash;首选语言&amp;ndash;选项&amp;ndash;微软拼音&amp;ndash;常规&amp;ndash;添加双拼方案&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;然后手动逐个输入双拼的键位方案。&lt;/p&gt;
+&lt;p&gt;另一种不需要手动逐个输入的方法是修改注册表。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Win+R -&amp;gt; regedit&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;进入注册表，定位到如下位置&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;计算机\HKEY_CURRENT_USER\Software\Microsoft\InputMethod\Settings\CHS&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;新建一个字符串&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;名称：UserDefinedDoublePinyinScheme0&lt;br&gt;
+数值：小鹤双拼&lt;em&gt;2&lt;/em&gt;^*iuvdjhcwfg^xmlnpbksqszxkrltvyovt&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;新建完成后，再次打开上面的设置路径，即可设置小鹤双拼。&lt;/p&gt;
+&lt;h3 id=&#34;生效注册表&#34;&gt;生效注册表&lt;/h3&gt;
+&lt;p&gt;如果发现未生效的话，可以进行如下任一操作（重启资源管理器）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;命令行修改&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Win+R -&amp;gt; cmd&lt;br&gt;
+taskkill /IM explorer.exe&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;任务管理器修改&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Ctrl+Alt+Del -&amp;gt; 任务管理器 -&amp;gt; 详细 -&amp;gt; explorer.exe -&amp;gt; 右键结束任务 -&amp;gt; 文件 -&amp;gt; 运行新任务 -&amp;gt; explorer.exe -&amp;gt; 确定&lt;/p&gt;
+&lt;/blockquote&gt;
+- https://pozhuzi.github.io/2020/20200408-xiaoheshuangpin/ - 2020 PoZhuzi. All rights reserved.</description>
+        </item>
+    
+    
+    
+        <item>
         <title>怎样才算是好的工作态度？</title>
-        <link>https://pozhuzi.github.io/2020/%E6%80%8E%E6%A0%B7%E6%89%8D%E7%AE%97%E6%98%AF%E5%A5%BD%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%80%81%E5%BA%A6/</link>
+        <link>https://pozhuzi.github.io/2020/20200406-how-to-work/</link>
         <pubDate>Sun, 05 Apr 2020 14:38:30 +0800</pubDate>
         
-        <guid>https://pozhuzi.github.io/2020/%E6%80%8E%E6%A0%B7%E6%89%8D%E7%AE%97%E6%98%AF%E5%A5%BD%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%80%81%E5%BA%A6/</guid>
-        <description>空山新雨后 https://pozhuzi.github.io/2020/%E6%80%8E%E6%A0%B7%E6%89%8D%E7%AE%97%E6%98%AF%E5%A5%BD%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%80%81%E5%BA%A6/ -&lt;p&gt;工作中，总会遇到形形色色的人，他们工作方式、态度不同，也有不同的结果。&lt;/p&gt;
+        <guid>https://pozhuzi.github.io/2020/20200406-how-to-work/</guid>
+        <description>空山新雨后 https://pozhuzi.github.io/2020/20200406-how-to-work/ -&lt;p&gt;工作中，总会遇到形形色色的人，他们工作方式、态度不同，也有不同的结果。&lt;/p&gt;
 &lt;h3 id=&#34;情绪差结果差&#34;&gt;情绪差，结果差&lt;/h3&gt;
 &lt;p&gt;A 工作对接中有这么一种人，遇到问题时，他不知所措，心理上渴求别人和他一起承担责任。属于他的过失，尽可能去模糊。在属于他与别人共同的过失，在言语上推托给别人。属于别人的过失，则是一副事不关己的态度。没事时，谈笑风生，称兄道弟；有事时，极力开溜。这种算是不负责的人，与他对接的工作中必须面面俱到，不敢发生过错&lt;/p&gt;
 &lt;h3 id=&#34;情绪好结果差&#34;&gt;情绪好，结果差&lt;/h3&gt;
@@ -28,18 +76,18 @@
 &lt;h3 id=&#34;情绪好结果好&#34;&gt;情绪好，结果好&lt;/h3&gt;
 &lt;p&gt;D 最后一个更让我佩服的人，是那种出了问题后他能有条不紊地去处理，没有和你啰嗦和绕弯子之类的，这或者是多年工作经验积累出来，几乎也没看到他有过情绪波动而说过什么不妥的话，总之工作上是一个可靠，值得信赖的伙伴。这种算是工作结果和情绪感受都能处理很好的类型，致使我有时不愿提过多的要求。&lt;/p&gt;
 &lt;p&gt;这些是我上周感受比较深的东西，希望自己是向最后一种看齐，对需求能够妥善处理好，同时情绪不要出现太多的波动。在别人提出的需求，不能急着推脱（如果手头在忙其他东西，可询问其缓急），同时多学习，培养解决问题的能力。&lt;/p&gt;
-- https://pozhuzi.github.io/2020/%E6%80%8E%E6%A0%B7%E6%89%8D%E7%AE%97%E6%98%AF%E5%A5%BD%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%80%81%E5%BA%A6/ - 2020 PoZhuzi. All rights reserved.</description>
+- https://pozhuzi.github.io/2020/20200406-how-to-work/ - 2020 PoZhuzi. All rights reserved.</description>
         </item>
     
     
     
         <item>
         <title>First Post</title>
-        <link>https://pozhuzi.github.io/2020/first/</link>
+        <link>https://pozhuzi.github.io/2020/20200308-first/</link>
         <pubDate>Sun, 08 Mar 2020 23:30:54 +0800</pubDate>
         
-        <guid>https://pozhuzi.github.io/2020/first/</guid>
-        <description>空山新雨后 https://pozhuzi.github.io/2020/first/ -&lt;p&gt;第一个post，总算是开始迈出一小步了。&lt;/p&gt;
+        <guid>https://pozhuzi.github.io/2020/20200308-first/</guid>
+        <description>空山新雨后 https://pozhuzi.github.io/2020/20200308-first/ -&lt;p&gt;第一个post，总算是开始迈出一小步了。&lt;/p&gt;
 &lt;p&gt;但是对于如何更新还不是很熟悉，对于这个hugo结构还很陌生，以及git的使用。&lt;/p&gt;
 &lt;p&gt;为后面定个目标吧&lt;/p&gt;
 &lt;ol&gt;
@@ -47,7 +95,7 @@
 &lt;li&gt;掌握如何更新删除&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;以上&lt;/p&gt;
-- https://pozhuzi.github.io/2020/first/ - 2020 PoZhuzi. All rights reserved.</description>
+- https://pozhuzi.github.io/2020/20200308-first/ - 2020 PoZhuzi. All rights reserved.</description>
         </item>
     
     

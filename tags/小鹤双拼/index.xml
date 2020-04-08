@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>小鹤双拼 on 空山新雨后</title>
+    <link>https://pozhuzi.github.io/tags/%E5%B0%8F%E9%B9%A4%E5%8F%8C%E6%8B%BC/</link>
+    <description>Recent content in 小鹤双拼 on 空山新雨后</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>2020 PoZhuzi. All rights reserved.</copyright>
+    <lastBuildDate>Wed, 08 Apr 2020 22:56:54 +0800</lastBuildDate>
+    
+	<atom:link href="https://pozhuzi.github.io/tags/%E5%B0%8F%E9%B9%A4%E5%8F%8C%E6%8B%BC/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>微软拼音配置小鹤双拼</title>
+      <link>https://pozhuzi.github.io/2020/20200408-xiaoheshuangpin/</link>
+      <pubDate>Wed, 08 Apr 2020 22:56:54 +0800</pubDate>
+      
+      <guid>https://pozhuzi.github.io/2020/20200408-xiaoheshuangpin/</guid>
+      <description>操作环境：Win10 版本1903 背景 之前进入git bash，谷歌拼音输入法无法进行中英状态切换，而微软拼音可以正常进行中英切换，所以舍弃谷歌</description>
+    </item>
+    
+  </channel>
+</rss>
