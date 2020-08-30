@@ -6,18 +6,27 @@
     <description>Recent content in Tags on 空山新雨后</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <copyright>2020 PoZhuzi. All rights reserved.</copyright>
-    <lastBuildDate>Wed, 08 Apr 2020 22:56:54 +0800</lastBuildDate>
+    <copyright>2020 Pozhuzi. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 31 Aug 2020 00:27:35 +0800</lastBuildDate>
     
 	<atom:link href="https://pozhuzi.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>小鹤双拼</title>
-      <link>https://pozhuzi.github.io/tags/%E5%B0%8F%E9%B9%A4%E5%8F%8C%E6%8B%BC/</link>
+      <title>VBA</title>
+      <link>https://pozhuzi.github.io/tags/vba/</link>
+      <pubDate>Mon, 31 Aug 2020 00:27:35 +0800</pubDate>
+      
+      <guid>https://pozhuzi.github.io/tags/vba/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>输入法</title>
+      <link>https://pozhuzi.github.io/tags/%E8%BE%93%E5%85%A5%E6%B3%95/</link>
       <pubDate>Wed, 08 Apr 2020 22:56:54 +0800</pubDate>
       
-      <guid>https://pozhuzi.github.io/tags/%E5%B0%8F%E9%B9%A4%E5%8F%8C%E6%8B%BC/</guid>
+      <guid>https://pozhuzi.github.io/tags/%E8%BE%93%E5%85%A5%E6%B3%95/</guid>
       <description></description>
     </item>
     

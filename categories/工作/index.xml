@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>心情 on 空山新雨后</title>
-    <link>https://pozhuzi.github.io/tags/%E5%BF%83%E6%83%85/</link>
-    <description>Recent content in 心情 on 空山新雨后</description>
+    <title>工作 on 空山新雨后</title>
+    <link>https://pozhuzi.github.io/categories/%E5%B7%A5%E4%BD%9C/</link>
+    <description>Recent content in 工作 on 空山新雨后</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>2020 Pozhuzi. All rights reserved.</copyright>
     <lastBuildDate>Sun, 05 Apr 2020 14:38:30 +0800</lastBuildDate>
     
-	<atom:link href="https://pozhuzi.github.io/tags/%E5%BF%83%E6%83%85/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://pozhuzi.github.io/categories/%E5%B7%A5%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,15 +19,6 @@
       
       <guid>https://pozhuzi.github.io/2020/20200406-how-to-work/</guid>
       <description>工作中，总会遇到形形色色的人，他们工作方式、态度不同，也有不同的结果。 情绪差，结果差 A 工作对接中有这么一种人，遇到问题时，他不知所措，心理上</description>
-    </item>
-    
-    <item>
-      <title>First Post</title>
-      <link>https://pozhuzi.github.io/2020/20200308-first/</link>
-      <pubDate>Sun, 08 Mar 2020 23:30:54 +0800</pubDate>
-      
-      <guid>https://pozhuzi.github.io/2020/20200308-first/</guid>
-      <description>第一个post，总算是开始迈出一小步了。 但是对于如何更新还不是很熟悉，对于这个hugo结构还很陌生，以及git的使用。 为后面定个目标吧 继续美</description>
     </item>
     
   </channel>
