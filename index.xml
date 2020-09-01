@@ -23,77 +23,73 @@
 &lt;h3 id=&#34;对象说明&#34;&gt;对象说明&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;G表格和X表格相似，G与X的格式都是固定的&lt;/li&gt;
-&lt;li&gt;X表格其实是一个模板，若选择G1，则提取G1的参数，若选择G2，则提取G2的参数&lt;/li&gt;
+&lt;li&gt;X表格是一个模板，若选择G1，则提取G1的参数，若选择G2，则提取G2的参数&lt;/li&gt;
 &lt;li&gt;G表格的子页数不固定&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&#34;解决步骤&#34;&gt;解决步骤&lt;/h3&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;选择G表格（这一步直接利用之前做相同需求的代码）。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; Dim filepath As String
- With Application.FileDialog(msoFileDialogFilePicker)&#39;开启选择窗口
-     .Title = &amp;quot;请选择相应的工艺卡&amp;quot;
-     .AllowMultiSelect = False &#39;只允许选择单一文件
-     .InitialFileName = ThisWorkbook.Path &#39;默认打开路径为本工作簿的路径
-     .Filters.Clear &#39;清除现有的文件类型
-     .Filters.Add &amp;quot;Excel&amp;quot;, &amp;quot;*.xls, *.xlsx&amp;quot;, 1 &#39;添加选择文件类型
-     .FilterIndex = 1
-     If .Show = -1 Then &#39;判定有无选择文件
-         filepath = .SelectedItems(1)
-         MsgBox &amp;quot;选择了：&amp;quot; &amp;amp; .SelectedItems(1), vbInformation
-     Else
-         MsgBox &amp;quot;未选择任何文件，请重新选择！&amp;quot;, vbExclamation
-         Exit Sub
-     End If
- End With
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;将G表格中子页的参数填到X表格的子页中：
-尝试过使用固定位置一一对应填进去，但是显得很臃肿，而且一但G表格的参数位置稍微一变化就会出错。所以利用G表格中的参数名称锁定参数，会比较灵活一点。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; Dim ProcessCard As Workbook
- Dim Process As Worksheet
- Dim ProItem As Range
- Dim ZhiCheng(5) As String &#39;定义制程（G与X表格的子页名称）的数组&#39;
- ZhiCheng(0) = &amp;quot;BM&amp;quot;
- ZhiCheng(1) = &amp;quot;R&amp;quot;
- ZhiCheng(2) = &amp;quot;G&amp;quot;
- ZhiCheng(3) = &amp;quot;B&amp;quot;
- ZhiCheng(4) = &amp;quot;OC&amp;quot;
- ZhiCheng(5) = &amp;quot;PS&amp;quot;
- Dim A As Variant
- Dim B As String
- Set ProcessCard = GetObject(filepath)
-
- For Each Process In ProcessCard.Worksheets &#39;对G子页进行循环&#39;
-     For Each A In ZhiCheng &#39;对数组进行循环&#39;
-         If InStr(Process.Name, A) Then &#39;若G与数组中的元素对应，开始提取&#39;
-             ThisWorkbook.Sheets(A).Range(&amp;quot;C5:D5,C6:C7,D8,F8,G8,K8,L8,M8,N8,O8,P8&amp;quot;) = &amp;quot;&amp;quot; &#39;初始化置空&#39;
-             For Each ProItem In Process.Range(&amp;quot;A1&amp;quot;, &amp;quot;A70&amp;quot;) &#39;在各页的第一页寻找参数名称&#39;
-             Select Case ProItem.Text
-             Case &amp;quot;适用产品&amp;quot;
-             ThisWorkbook.Sheets(A).Range(&amp;quot;C5&amp;quot;) = ProItem.Offset(0, 1).Text  &#39;直接复制粘贴参数&#39;
-
-             Case &amp;quot;Coating 速度&amp;quot;
-             B = ProItem.Offset(0, 1).Text
-             B = Replace(B, &amp;quot;mm/s&amp;quot;, &amp;quot;&amp;quot;)
-             ThisWorkbook.Sheets(A).Range(&amp;quot;F8&amp;quot;) = B &#39;替换掉参数里面的单位&#39;
-
-             Case &amp;quot;COT Dispense Speed&amp;quot;
-             B = ProItem.Offset(0, 1).Text
-             B = Left(B, 4)
-             ThisWorkbook.Sheets(A).Range(&amp;quot;G8&amp;quot;) = B&#39;只选择参数的前四位（容易出bug)&#39;
-
-             End Select
-             Next
-         End If
-     Next
- Next
- GetObject(filepath).Close &#39;关闭打开的工作簿&#39;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
+&lt;li&gt;选择G表格（这一步直接利用之前做相同需求的代码）。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;总结&#34;&gt;总结&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;Dim filepath As String
+With Application.FileDialog(msoFileDialogFilePicker)&#39;开启选择窗口
+  .Title = &amp;quot;请选择相应的工艺卡&amp;quot;
+  .AllowMultiSelect = False &#39;只允许选择单一文件
+  .InitialFileName = ThisWorkbook.Path &#39;默认打开路径为本工作簿的路径
+  .Filters.Clear &#39;清除现有的文件类型
+  .Filters.Add &amp;quot;Excel&amp;quot;, &amp;quot;*.xls, *.xlsx&amp;quot;, 1 &#39;添加选择文件类型
+  .FilterIndex = 1
+  If .Show = -1 Then &#39;判定有无选择文件
+    filepath = .SelectedItems(1)
+    MsgBox &amp;quot;选择了：&amp;quot; &amp;amp; .SelectedItems(1), vbInformation
+  Else
+    MsgBox &amp;quot;未选择任何文件，请重新选择！&amp;quot;, vbExclamation
+    Exit Sub
+  End If
+End With
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;将G表格中子页的参数填到X表格的子页中：
+尝试过使用固定位置一一对应填进去，但是显得很臃肿，而且一但G表格的参数位置稍微一变化就会出错。所以利用G表格中的参数名称锁定参数，会比较灵活一点。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;Dim ProcessCard As Workbook
+Dim Process As Worksheet
+Dim ProItem As Range
+Dim ZhiCheng(5) As String &#39;定义制程（G与X表格的子页名称）的数组
+ZhiCheng(0) = &amp;quot;BM&amp;quot;
+ZhiCheng(1) = &amp;quot;R&amp;quot;
+ZhiCheng(2) = &amp;quot;G&amp;quot;
+ZhiCheng(3) = &amp;quot;B&amp;quot;
+ZhiCheng(4) = &amp;quot;OC&amp;quot;
+ZhiCheng(5) = &amp;quot;PS&amp;quot;
+Dim A As Variant
+Dim B As String
+Set ProcessCard = GetObject(filepath)
+
+For Each Process In ProcessCard.Worksheets &#39;对G子页进行循环
+  For Each A In ZhiCheng &#39;对数组进行循环&#39;
+    If InStr(Process.Name, A) Then &#39;若G与数组中的元素对应，开始提取
+      ThisWorkbook.Sheets(A).Range(&amp;quot;C5:D5,C6:C7,D8,F8,G8,K8,L8,M8,N8,O8,P8&amp;quot;) = &amp;quot;&amp;quot; &#39;初始化置空
+      For Each ProItem In Process.Range(&amp;quot;A1&amp;quot;, &amp;quot;A70&amp;quot;) &#39;在各页的第一页寻找参数名称
+        Select Case ProItem.Text
+        Case &amp;quot;适用产品&amp;quot;
+        ThisWorkbook.Sheets(A).Range(&amp;quot;C5&amp;quot;) = ProItem.Offset(0, 1).Text  &#39;直接复制粘贴参数
+    
+        Case &amp;quot;Coating 速度&amp;quot;
+        B = ProItem.Offset(0, 1).Text
+        B = Replace(B, &amp;quot;mm/s&amp;quot;, &amp;quot;&amp;quot;)
+        ThisWorkbook.Sheets(A).Range(&amp;quot;F8&amp;quot;) = B &#39;替换掉参数里面的单位
+    
+        Case &amp;quot;COT Dispense Speed&amp;quot;
+        B = ProItem.Offset(0, 1).Text
+        B = Left(B, 4)
+        ThisWorkbook.Sheets(A).Range(&amp;quot;G8&amp;quot;) = B&#39;只选择参数的前四位（容易出bug)
+        
+        End Select
+      Next
+    End If
+  Next
+Next
+GetObject(filepath).Close &#39;关闭打开的工作簿
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;总结&#34;&gt;总结&lt;/h3&gt;
 &lt;p&gt;利用循环解决了位置不固定的问题，其中比较麻烦的是对参数的处理，有的是直接复制，有的是替换单位，有的无法识别单位符号的就选用前四位。&lt;/p&gt;
 &lt;h3 id=&#34;更新记录&#34;&gt;更新记录&lt;/h3&gt;
 &lt;ul&gt;
