@@ -30,7 +30,10 @@
 &lt;ol&gt;
 &lt;li&gt;选择G表格（这一步直接利用之前做相同需求的代码）。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;Dim filepath As String
+&lt;pre&gt;&lt;code&gt;Option Compare Text &#39;不区分大小写比较文本
+Option Explicit
+Sub 按钮1_Click()
+Application.ScreenUpdating = False   &#39;关闭屏幕刷新Dim filepath As String
 With Application.FileDialog(msoFileDialogFilePicker)&#39;开启选择窗口
   .Title = &amp;quot;请选择相应的工艺卡&amp;quot;
   .AllowMultiSelect = False &#39;只允许选择单一文件
@@ -53,6 +56,8 @@ End With
 &lt;pre&gt;&lt;code&gt;Dim ProcessCard As Workbook
 Dim Process As Worksheet
 Dim ProItem As Range
+Dim Protext As String
+
 Dim ZhiCheng(5) As String &#39;定义制程（G与X表格的子页名称）的数组
 ZhiCheng(0) = &amp;quot;BM&amp;quot;
 ZhiCheng(1) = &amp;quot;R&amp;quot;
@@ -63,12 +68,16 @@ ZhiCheng(5) = &amp;quot;PS&amp;quot;
 Dim A As Variant
 Dim B As String
 Set ProcessCard = GetObject(filepath)
+Dim testcount As Integer
+testcount = 0
 
 For Each Process In ProcessCard.Worksheets &#39;对G子页进行循环
   For Each A In ZhiCheng &#39;对数组进行循环&#39;
     If InStr(Process.Name, A) Then &#39;若G与数组中的元素对应，开始提取
       ThisWorkbook.Sheets(A).Range(&amp;quot;C5:D5,C6:C7,D8,F8,G8,K8,L8,M8,N8,O8,P8&amp;quot;) = &amp;quot;&amp;quot; &#39;初始化置空
       For Each ProItem In Process.Range(&amp;quot;A1&amp;quot;, &amp;quot;A70&amp;quot;) &#39;在各页的第一页寻找参数名称
+        Protext = Trim(ProItem.Text) &#39;去掉字符前后的空格
+        
         Select Case ProItem.Text
         Case &amp;quot;适用产品&amp;quot;
         ThisWorkbook.Sheets(A).Range(&amp;quot;C5&amp;quot;) = ProItem.Offset(0, 1).Text  &#39;直接复制粘贴参数
@@ -88,12 +97,25 @@ For Each Process In ProcessCard.Worksheets &#39;对G子页进行循环
     End If
   Next
 Next
+
+&#39;判断参数是否为空
+For Each A In ZhiCheng &#39;对制程进行循环
+ If ThisWorkbook.Sheets(A).Range(&amp;quot;C5&amp;quot;) = &amp;quot;&amp;quot; Then &#39;如果为空则提示
+testcount = testcount + 1
+MsgBox &amp;quot;sheet &amp;quot; &amp;amp; A &amp;amp; &amp;quot; C5 为空，请检查工艺卡格式&amp;quot; &amp;amp; Chr(13) &amp;amp; &amp;quot;或手动填入参数&amp;quot;
+End If
+Next
+If testcount = 0 Then
+MsgBox &amp;quot;提取成功！&amp;quot;
+End If
+
 GetObject(filepath).Close &#39;关闭打开的工作簿
 &lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;总结&#34;&gt;总结&lt;/h3&gt;
 &lt;p&gt;利用循环解决了位置不固定的问题，其中比较麻烦的是对参数的处理，有的是直接复制，有的是替换单位，有的无法识别单位符号的就选用前四位。&lt;/p&gt;
 &lt;h3 id=&#34;更新记录&#34;&gt;更新记录&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;v1.1 添加初始化置空，避免未能提取参数的情况下保存上次记录，造成误会。&lt;/li&gt;
+&lt;li&gt;v1.2 加入判断函数（是否全部提取成功），使用Compare Text声明及Trim函数。&lt;/li&gt;
 &lt;/ul&gt;
 - https://pozhuzi.github.io/2020/20200831-vba-extract/ - 2020 Pozhuzi. All rights reserved.</description>
         </item>
