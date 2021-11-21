@@ -44,7 +44,6 @@ if (!doNotTrack) {
 </script>
 
 
-
 <script src="/vendor/js/jquery.min.js" ></script>
 <script src="/vendor/js/popper.min.js" ></script>
 <script src="/vendor/js/bootstrap.min.js" ></script>
@@ -592,7 +591,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 <ol>
 <li>选择G表格（这一步直接利用之前做相同需求的代码）。</li>
 </ol>
-<pre><code>Option Compare Text '不区分大小写比较文本
+<pre tabindex="0"><code>Option Compare Text '不区分大小写比较文本
 Option Explicit
 Sub 按钮1_Click()
 Application.ScreenUpdating = False   '关闭屏幕刷新Dim filepath As String
@@ -615,7 +614,7 @@ End With
 <li>将G表格中子页的参数填到X表格的子页中：
 尝试过使用固定位置一一对应填进去，但是显得很臃肿，而且一但G表格的参数位置稍微一变化就会出错。所以利用G表格中的参数名称锁定参数，会比较灵活一点。</li>
 </ol>
-<pre><code>Dim ProcessCard As Workbook
+<pre tabindex="0"><code>Dim ProcessCard As Workbook
 Dim Process As Worksheet
 Dim ProItem As Range
 Dim Protext As String
@@ -691,8 +690,8 @@ GetObject(filepath).Close '关闭打开的工作簿
             <nav class="post-pagination">
 
                 
-                <a class="newer-posts">
-                    Next<br>No newer posts.
+                <a class="newer-posts" href="https://pozhuzi.github.io/about/">
+                    Next<br>自我介绍
                 </a>
                 
                 
